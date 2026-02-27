@@ -1,0 +1,203 @@
+/* ==========
+   Uniboost (仮) - Local Static Site
+   Theme: Orange & White
+   ========== */
+
+:root{
+  --primary:#ff8a00;
+  --primary-dark:#e67600;
+  --text:#1b1b1b;
+  --muted:#666;
+  --bg:#ffffff;
+  --border:#e6e6e6;
+  --shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  color:var(--text);
+  background:#f8f8f8;
+}
+
+a{color:inherit; text-decoration:none}
+img{max-width:100%; height:auto; display:block}
+
+.page{
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  min-height:100vh;
+  background:var(--bg);
+  border-left:1px solid var(--border);
+  border-right:1px solid var(--border);
+  box-shadow:var(--shadow);
+}
+
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:var(--bg);
+  border-bottom:2px solid var(--primary);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 12px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:80px;
+}
+.logo img{
+  width:78px;
+  height:auto;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px 10px;
+  border:1px solid var(--primary);
+  border-radius:10px;
+  font-size:12px;
+  line-height:1;
+  background:#fff;
+}
+
+.nav a:hover{background:rgba(255,138,0,.08)}
+.nav a.is-active{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+.nav a.nav__cta{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+.nav a.nav__cta:hover{background:var(--primary-dark)}
+
+/* Main */
+main{padding:0 0 20px}
+
+.image-block{
+  padding:0;
+}
+.image-block img{
+  width:100%;
+}
+
+.section{
+  padding:14px 12px;
+}
+.section-title{
+  margin:0;
+  text-align:center;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.02em;
+}
+
+.section-sub{
+  margin:8px 0 0;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* Layout helpers */
+.stack{display:flex; flex-direction:column; gap:12px}
+.card-grid{display:flex; flex-direction:column; gap:12px}
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:6px;
+}
+
+.card-like{
+  border:1px solid var(--border);
+  border-radius:10px;
+  overflow:hidden;
+  background:#fff;
+}
+
+/* Contact */
+.contact-box{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:12px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--primary);
+  background:var(--primary);
+  color:#fff;
+  font-weight:700;
+  font-size:13px;
+}
+.btn:hover{background:var(--primary-dark)}
+
+/* Footer */
+.site-footer{
+  background:var(--primary);
+  color:#fff;
+  padding:16px 12px;
+}
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:center;
+  text-align:center;
+}
+.footer-brand{
+  margin:0;
+  font-size:24px;
+  font-weight:900;
+  letter-spacing:.02em;
+}
+.footer-note{
+  margin:0;
+  font-size:11px;
+  opacity:.9;
+}
+
+/* Active states (no JS needed) */
+body[data-page="top"] .nav a[data-link="top"],
+body[data-page="about"] .nav a[data-link="about"],
+body[data-page="service"] .nav a[data-link="service"],
+body[data-page="news"] .nav a[data-link="news"]{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+/* Small screens */
+@media (max-width:360px){
+  .nav a{padding:6px 8px; border-radius:9px}
+  .logo img{width:68px}
+}
