@@ -135,7 +135,8 @@ main{padding:0 0 40px}
 /* Layout helpers */
 .stack{display:flex; flex-direction:column; gap:16px}
 .card-grid{display:flex; flex-direction:column; gap:18px}
-.news-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
+
+.news-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
 
 .card-like,
 .contact-box{
