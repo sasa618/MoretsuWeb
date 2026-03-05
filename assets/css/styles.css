@@ -135,6 +135,8 @@ main{padding:0 0 40px}
 /* Layout helpers */
 .stack{display:flex; flex-direction:column; gap:16px}
 .card-grid{display:flex; flex-direction:column; gap:18px}
+.news-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
+
 
 .news-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
 
@@ -184,6 +186,12 @@ main{padding:0 0 40px}
 
 .footer-brand{margin:0; font-size:30px; font-weight:900; letter-spacing:.01em}
 .footer-note{margin:0; font-size:14px; opacity:.85}
+
+/* Tablet / Mobile (merge-conflict resolved) */
+@media (max-width:900px){
+  .news-grid{
+    display:grid !important;
+    grid-template-columns:1fr !important;
 /* Tablet / Mobile (merge-conflict resolved) */
 @media (max-width:900px){
   .news-grid{
