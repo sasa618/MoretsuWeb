@@ -47,7 +47,6 @@ img{max-width:100%; height:auto; display:block}
   background:var(--bg);
 }
 
-/* Header */
 .site-header{
   position:sticky;
   top:0;
@@ -89,10 +88,7 @@ img{max-width:100%; height:auto; display:block}
   transition:.18s ease;
 }
 
-.nav a:hover{
-  border-color:var(--primary);
-  color:var(--primary-dark);
-}
+.nav a:hover{border-color:var(--primary); color:var(--primary-dark)}
 
 .nav a.is-active,
 body[data-page="about"] .nav a[data-link="about"],
@@ -103,14 +99,9 @@ body[data-page="news"] .nav a[data-link="news"]{
   color:#fff;
 }
 
-.nav a.nav__cta{
-  background:var(--primary);
-  border-color:var(--primary);
-  color:#fff;
-}
+.nav a.nav__cta{background:var(--primary); border-color:var(--primary); color:#fff}
 .nav a.nav__cta:hover{background:var(--primary-dark); border-color:var(--primary-dark)}
 
-/* Main */
 main{padding:0 0 40px}
 
 .image-block{
@@ -142,7 +133,6 @@ main{padding:0 0 40px}
   color:var(--muted);
 }
 
-/* Layout helpers */
 .stack{display:flex; flex-direction:column; gap:16px}
 .card-grid{display:flex; flex-direction:column; gap:18px; max-width:var(--content-max); margin:0 auto}
 .news-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; max-width:var(--content-max); margin:0 auto}
@@ -183,19 +173,41 @@ main{padding:0 0 40px}
 }
 .btn:hover{background:var(--primary-dark)}
 
-/* Footer */
-.site-footer{
-  background:#121212;
-  color:#fff;
-  padding:28px 24px;
+.site-footer{background:#121212; color:#fff; padding:28px 24px}
+.footer-inner{display:flex; flex-direction:column; gap:8px; align-items:center; text-align:center}
+.footer-brand{margin:0; font-size:var(--font-footer-brand); font-weight:900; letter-spacing:.01em}
+.footer-note{margin:0; font-size:14px; opacity:.85}
+
+/* Step 1 */
+@media (max-width:1400px){
+  :root{
+    --font-body:18px;
+    --font-nav:15px;
+    --font-section-title:2rem;
+    --font-section-sub:1.08rem;
+    --font-footer-brand:30px;
+    --size-logo:98px;
+    --section-padding-y:36px;
+    --section-padding-x:24px;
+    --service-card-width:900px;
+    --card-image-max-height:460px;
+  }
 }
 
-.footer-inner{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  align-items:center;
-  text-align:center;
+/* Step 2 */
+@media (max-width:1200px){
+  :root{
+    --font-body:17px;
+    --font-nav:14px;
+    --font-section-title:1.9rem;
+    --font-section-sub:1.02rem;
+    --font-footer-brand:28px;
+    --size-logo:92px;
+    --section-padding-y:32px;
+    --section-padding-x:20px;
+    --service-card-width:780px;
+    --card-image-max-height:400px;
+  }
 }
 
 .footer-brand{margin:0; font-size:var(--font-footer-brand); font-weight:900; letter-spacing:.01em}
