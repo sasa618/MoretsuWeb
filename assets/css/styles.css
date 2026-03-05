@@ -184,7 +184,7 @@ main{padding:0 0 40px}
 .footer-brand{margin:0; font-size:30px; font-weight:900; letter-spacing:.01em}
 .footer-note{margin:0; font-size:14px; opacity:.85}
 
-/* Tablet / Mobile */
+/* Tablet / Mobile (merge-conflict resolved) */
 @media (max-width:900px){
   .news-grid{
     display:flex;
