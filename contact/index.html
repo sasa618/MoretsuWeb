@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <base href="../">
+    <title>Contact | Uniboost（仮）</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body data-page="contact">
+    <div class="page">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="logo" href="index.html" aria-label="トップへ">
+            <img src="assets/logo.png" alt="Logo" />
+          </a>
+          <nav class="nav" aria-label="グローバルナビゲーション">
+            <a href="service/index.html" data-link="service">Service</a>
+            <a href="about/index.html" data-link="about">about</a>
+            <a href="News/index.html" data-link="news">News</a>
+            <a class="nav__cta" href="/contact/index.html" data-link="contact">お問い合わせ</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="contact-main">
+        <section class="section contact-hero contact-shell">
+          <p class="contact-kicker">CONTACT</p>
+          <h1 class="section-title">お問い合わせ</h1>
+          <p class="section-sub contact-hero__sub">弊社へのお問い合わせは、こちらよりお願いいたします。通常1〜2営業日以内にご返信いたします。</p>
+        </section>
+
+        <section class="section contact-form-section contact-shell">
+          <div class="contact-layout">
+            <aside class="contact-aside card-like">
+              <h2>ご相談内容について</h2>
+              <p>取材依頼・サービス導入のご相談など、お気軽にご連絡ください。</p>
+              <ul>
+                <li>必須項目をご入力ください</li>
+                <li>内容確認後、担当者よりご連絡します</li>
+                <li>お急ぎの場合は電話番号もご入力ください</li>
+              </ul>
+            </aside>
+
+            <form id="contactForm" class="contact-form card-like" novalidate>
+              <div class="form-grid">
+                <label class="form-field">
+                  <span class="form-label">お名前 <em>必須</em></span>
+                  <input type="text" name="name" required placeholder="例）山田 太郎" />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-label">会社名 <em>必須</em></span>
+                  <input type="text" name="company" required placeholder="例）株式会社モーレツ" />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-label">メアド <em>必須</em></span>
+                  <input type="email" name="email" required placeholder="example@company.co.jp" />
+                </label>
+
+                <label class="form-field">
+                  <span class="form-label">電話番号</span>
+                  <input type="tel" name="phone" placeholder="03-1234-5678" />
+                </label>
+              </div>
+
+              <fieldset class="form-field form-fieldset">
+                <legend class="form-label">問い合わせ概要 <em>必須</em></legend>
+                <div class="radio-group">
+                  <label class="radio-row"><input type="radio" name="summary" value="取材依頼" required /> 取材依頼</label>
+                  <label class="radio-row"><input type="radio" name="summary" value="サービスに関するご相談" required /> サービスに関するご相談</label>
+                </div>
+              </fieldset>
+
+              <label class="form-field">
+                <span class="form-label">お問い合わせ内容 <em>必須</em></span>
+                <textarea name="message" rows="8" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+              </label>
+
+              <p class="form-note">入力完了後「メール送付」を押すと、メールアプリが起動します。</p>
+              <button type="submit" class="btn contact-submit">メール送付</button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <p class="footer-brand">モーレツ</p>
+          <p class="footer-note">© 2026 Uniboost (temporary)</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
