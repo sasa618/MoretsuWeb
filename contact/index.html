@@ -6,6 +6,7 @@
     <base href="../">
     <title>Contact | Uniboost（仮）</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
   </head>
   <body data-page="contact">
     <div class="page">
@@ -17,7 +18,7 @@
           <nav class="nav" aria-label="グローバルナビゲーション">
             <a href="service/index.html" data-link="service">Service</a>
             <a href="about/index.html" data-link="about">about</a>
-            <a href="News/index.html" data-link="news">News</a>
+            <a href="News/" data-link="news">News</a>
             <a class="nav__cta" href="contact/index.html" data-link="contact">お問い合わせ</a>
           </nav>
         </div>
@@ -25,8 +26,10 @@
 
       <main>
         <section class="section contact-hero">
-          <h1 class="section-title">お問い合わせ</h1>
-          <p class="section-sub contact-hero__sub">弊社へのお問い合わせは、こちらよりお願いいたします。</p>
+          <div class="contact-shell">
+            <h1 class="section-title contact-title">お問い合わせ</h1>
+            <p class="section-sub contact-hero__sub">弊社へのお問い合わせは<br>こちらよりお願いいたします。</p>
+          </div>
         </section>
 
         <section class="section contact-form-section">
@@ -42,7 +45,7 @@
             </label>
 
             <label class="form-field">
-              <span class="form-label">メアド <em>必須</em></span>
+              <span class="form-label">メールアドレス <em>必須</em></span>
               <input type="email" name="email" required />
             </label>
 
@@ -52,7 +55,7 @@
             </label>
 
             <fieldset class="form-field form-fieldset">
-              <legend class="form-label">問い合わせ概要 <em>必須</em></legend>
+              <legend class="form-label">概要 <em>必須</em></legend>
               <label class="radio-row"><input type="radio" name="summary" value="取材依頼" required /> 取材依頼</label>
               <label class="radio-row"><input type="radio" name="summary" value="サービスに関するご相談" required /> サービスに関するご相談</label>
             </fieldset>
