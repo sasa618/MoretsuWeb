@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-label="メンバー1">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffedd5"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" fill="url(#bg1)"/>
+  <circle cx="160" cy="126" r="68" fill="#ffddb0"/>
+  <path d="M95 240c16-42 44-62 65-62s49 20 65 62" fill="#fb923c"/>
+  <path d="M106 104c8-30 28-46 54-46s46 16 54 46c-16-12-30-18-54-18s-38 6-54 18z" fill="#9a3412"/>
+  <circle cx="136" cy="128" r="6" fill="#7c2d12"/>
+  <circle cx="184" cy="128" r="6" fill="#7c2d12"/>
+  <path d="M140 154c12 10 28 10 40 0" fill="none" stroke="#7c2d12" stroke-width="5" stroke-linecap="round"/>
+</svg>

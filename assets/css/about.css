@@ -1,0 +1,122 @@
+:root {
+  --about-accent: #f57c00;
+  --about-accent-dark: #d76100;
+  --about-surface: #fff7ed;
+}
+
+.about-hero {
+  text-align: center;
+  border-bottom: 0;
+  padding-bottom: 20px;
+}
+
+.about-hero__eyebrow {
+  margin: 0 0 12px;
+  color: var(--about-accent-dark);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+
+.about-members {
+  background: linear-gradient(180deg, #ffffff 0%, #fff7ed 100%);
+}
+
+.member-grid {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.member-card {
+  border: 1px solid #fed7aa;
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(245, 124, 0, 0.12);
+}
+
+.member-card__button {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 18px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+  gap: 10px;
+}
+
+.member-card__button:hover,
+.member-card__button:focus-visible {
+  background: var(--about-surface);
+  outline: 3px solid rgba(245, 124, 0, 0.3);
+  outline-offset: -3px;
+}
+
+.member-card__image-wrap {
+  margin: 0 auto;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ffedd5;
+}
+
+.member-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-card__role {
+  margin: 0;
+  color: #9a3412;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.member-card__name {
+  margin: 0;
+  color: #7c2d12;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.member-card__greeting {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: #431407;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.member-card__greeting[hidden] {
+  display: none;
+}
+
+.member-card.is-open {
+  border-color: var(--about-accent);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+}
