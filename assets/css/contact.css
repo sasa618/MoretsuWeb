@@ -1,0 +1,149 @@
+/* Contact page specific styles */
+body[data-page="contact"] {
+  background: #f3f3f3;
+}
+
+body[data-page="contact"] .site-header {
+  position: static;
+  background: #fff;
+}
+
+body[data-page="contact"] .section {
+  border-bottom: none;
+  background: transparent;
+}
+
+.contact-shell,
+.contact-form {
+  width: min(100%, 760px);
+  margin: 0 auto;
+}
+
+.contact-hero {
+  padding-top: 48px;
+  padding-bottom: 20px;
+}
+
+.contact-title {
+  text-align: left;
+  font-size: 2.35rem;
+}
+
+.contact-hero__sub {
+  text-align: left;
+  margin-top: 12px;
+  color: #374151;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.contact-form-section {
+  padding-top: 6px;
+  padding-bottom: 64px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form .form-label {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.contact-form .form-label em {
+  font-style: normal;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: #f57c00;
+  color: #fff;
+  vertical-align: middle;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #dadde4;
+  border-radius: 4px;
+  padding: 11px 12px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #f57c00;
+  box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.2);
+}
+
+.contact-form .form-fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contact-form .radio-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 0.98rem;
+  color: #1f2937;
+}
+
+.contact-form .radio-row input[type="radio"] {
+  accent-color: #f57c00;
+  width: 16px;
+  height: 16px;
+}
+
+.form-note {
+  margin: 6px 0 0;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+.contact-form .btn {
+  align-self: flex-start;
+  margin-top: 8px;
+  min-width: 170px;
+  border-radius: 10px;
+  background: #f57c00;
+}
+
+.contact-form .btn:hover {
+  background: #d76100;
+}
+
+@media (max-width: 700px) {
+  .contact-title {
+    font-size: 1.9rem;
+  }
+
+  .contact-hero {
+    padding-top: 30px;
+  }
+
+  .contact-form-section {
+    padding-bottom: 40px;
+  }
+}
