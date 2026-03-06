@@ -102,55 +102,18 @@ body[data-page="contact"] .section {
 }
 
 .contact-form .radio-row {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
-  margin-right: 18px;
-  padding: 6px 10px 6px 0;
+  margin-top: 8px;
   font-size: 0.98rem;
   color: #1f2937;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.contact-form .radio-row:hover {
-  color: #111827;
 }
 
 .contact-form .radio-row input[type="radio"] {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-  width: 19px;
-  height: 19px;
-  border-radius: 50%;
-  border: 2px solid #c9ced9;
-  background: radial-gradient(circle, #f57c00 0 42%, transparent 46% 100%);
-  background-color: #fff;
-  background-position: center;
-  background-size: 0 0;
-  background-repeat: no-repeat;
-  transition: border-color 0.2s ease, background-size 0.18s ease, box-shadow 0.2s ease, transform 0.15s ease;
-  cursor: pointer;
-}
-
-.contact-form .radio-row input[type="radio"]:hover {
-  border-color: #f59e43;
-}
-
-.contact-form .radio-row input[type="radio"]:checked {
-  border-color: #f57c00;
-  background-size: 100% 100%;
-}
-
-.contact-form .radio-row input[type="radio"]:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(245, 124, 0, 0.18);
-}
-
-.contact-form .radio-row input[type="radio"]:active {
-  transform: scale(0.96);
+  accent-color: #f57c00;
+  width: 16px;
+  height: 16px;
 }
 
 .form-note {
