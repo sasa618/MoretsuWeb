@@ -13,22 +13,16 @@
   --shadow:0 10px 30px rgba(17,24,39,.08);
   --radius:16px;
 
-  /* Stepwise responsive tokens (desktop default) */
-  --font-body:19px;
-  --font-nav:16px;
-  --font-section-title:2.15rem;
-  --font-section-sub:1.12rem;
-  --font-footer-brand:32px;
-  --size-logo:104px;
-  --section-padding-y:40px;
-  --section-padding-x:28px;
+  /* Responsive step scales */
+  --font-body:18px;
+  --font-nav:15px;
+  --font-section-title:2rem;
+  --font-section-sub:1.08rem;
+  --font-footer-brand:30px;
+  --size-logo:98px;
+  --section-padding-y:36px;
+  --section-padding-x:24px;
   --content-max:1200px;
-
-  /* img3~5 only: fixed width by breakpoint (discrete/stepwise) */
-  --service-card-width:980px;
-
-  /* other card image height is still stepwise */
-  --card-image-max-height:500px;
 }
 
 *{box-sizing:border-box}
@@ -155,24 +149,14 @@ main{padding:0 0 40px}
 .card-like{transition:.2s ease}
 .card-like:hover{box-shadow:var(--shadow); transform:translateY(-2px)}
 
-/* default card images */
+/* Stepwise image sizing */
 .card-like img{
   width:100%;
-  max-height:var(--card-image-max-height);
+  max-height:460px;
   object-fit:cover;
 }
 
-/* img3~5: centered + discrete width changes by breakpoints */
-.service-card-grid .card-like{
-  width:min(100%, var(--service-card-width));
-  margin-inline:auto;
-}
-.service-card-grid .card-like img{
-  width:100%;
-  max-height:none;
-  object-fit:contain;
-}
-
+/* Contact */
 .contact-box{padding:20px; font-size:1rem}
 
 .btn{
@@ -226,185 +210,71 @@ main{padding:0 0 40px}
   }
 }
 
-/* Step 3 */
-@media (max-width:1024px){
+.footer-brand{margin:0; font-size:var(--font-footer-brand); font-weight:900; letter-spacing:.01em}
+.footer-note{margin:0; font-size:14px; opacity:.85}
+
+/* ---- Breakpoint steps: large desktop -> desktop -> tablet -> mobile ---- */
+@media (max-width:1200px){
+  :root{
+    --font-body:17px;
+    --font-nav:14px;
+    --font-section-title:1.85rem;
+    --font-section-sub:1.02rem;
+    --font-footer-brand:28px;
+    --size-logo:92px;
+    --section-padding-y:32px;
+    --section-padding-x:20px;
+  }
+  .card-like img{max-height:400px}
+}
+
+@media (max-width:900px){
   :root{
     --font-body:16px;
     --font-nav:13px;
-    --font-section-title:1.8rem;
-    --font-section-sub:1rem;
-    --font-footer-brand:27px;
-    --size-logo:90px;
-    --section-padding-y:30px;
-    --section-padding-x:18px;
-    --service-card-width:680px;
-    --card-image-max-height:360px;
-  }
-}
-
-/* Step 4 */
-@media (max-width:900px){
-  :root{
-    --font-body:15px;
-    --font-nav:12px;
-    --font-section-title:1.65rem;
-    --font-section-sub:0.96rem;
-    --font-footer-brand:25px;
-    --size-logo:84px;
-    --section-padding-y:26px;
+    --font-section-title:1.7rem;
+    --font-section-sub:0.98rem;
+    --font-footer-brand:26px;
+    --size-logo:88px;
+    --section-padding-y:28px;
     --section-padding-x:16px;
-    --service-card-width:600px;
-    --card-image-max-height:330px;
   }
 
   .header-inner{padding:12px 16px}
   .news-grid{grid-template-columns:1fr}
+  .card-like img{max-height:340px}
 }
 
-/* Step 5 */
-@media (max-width:768px){
+@media (max-width:700px){
   :root{
-    --font-body:14px;
+    --font-body:15px;
     --font-nav:12px;
     --font-section-title:1.5rem;
-    --font-section-sub:0.92rem;
+    --font-section-sub:0.94rem;
     --font-footer-brand:24px;
-    --size-logo:80px;
+    --size-logo:82px;
     --section-padding-y:24px;
     --section-padding-x:14px;
-    --service-card-width:520px;
-    --card-image-max-height:290px;
   }
 
   .nav{gap:8px}
   .nav a{padding:8px 12px}
+  .card-like img{max-height:280px}
 }
 
-/* Step 6 */
-@media (max-width:640px){
+@media (max-width:480px){
   :root{
     --font-body:14px;
     --font-nav:11px;
-    --font-section-title:1.4rem;
+    --font-section-title:1.35rem;
     --font-section-sub:0.9rem;
-    --font-footer-brand:23px;
+    --font-footer-brand:22px;
     --size-logo:76px;
-    --section-padding-y:22px;
+    --section-padding-y:20px;
     --section-padding-x:12px;
-    --service-card-width:440px;
-    --card-image-max-height:250px;
   }
 
   .header-inner{padding:10px 12px}
   .nav{justify-content:center}
-}
-
-/* Step 7 */
-@media (max-width:480px){
-  :root{
-    --font-body:13px;
-    --font-nav:10px;
-    --font-section-title:1.3rem;
-    --font-section-sub:0.86rem;
-    --font-footer-brand:22px;
-    --size-logo:72px;
-    --section-padding-y:20px;
-    --section-padding-x:10px;
-    --service-card-width:340px;
-    --card-image-max-height:220px;
-  }
-}
-
-/* Step 8 */
-@media (max-width:360px){
-  :root{
-    --font-body:12px;
-    --font-nav:10px;
-    --font-section-title:1.2rem;
-    --font-section-sub:0.82rem;
-    --font-footer-brand:20px;
-    --size-logo:68px;
-    --section-padding-y:18px;
-    --section-padding-x:8px;
-    --service-card-width:280px;
-    --card-image-max-height:180px;
-  }
-}
-
-/* Contact page */
-body[data-page="contact"] .nav a[data-link="contact"]{
-  background:var(--primary);
-  border-color:var(--primary);
-  color:#fff;
-}
-
-.contact-hero{
-  background:#f5f5f5;
-}
-
-.contact-hero__sub{
-  max-width:520px;
-  margin:16px auto 0;
-}
-
-.contact-form-section{
-  background:#f5f5f5;
-  border-top:0;
-}
-
-.contact-form{
-  width:min(100%, 760px);
-  margin:0 auto;
-  display:flex;
-  flex-direction:column;
-  gap:22px;
-}
-
-.form-field{display:flex; flex-direction:column; gap:10px}
-
-.form-label{
-  font-weight:800;
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.form-label em{
-  font-style:normal;
-  font-size:0.82em;
-  background:#2f7460;
-  color:#fff;
-  border-radius:4px;
-  padding:2px 8px;
-}
-
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-  border:1px solid #d1d5db;
-  border-radius:8px;
-  padding:12px 14px;
-  font:inherit;
-  background:#fff;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-  outline:none;
-  border-color:var(--primary);
-  box-shadow:0 0 0 3px rgba(245,124,0,.2);
-}
-
-.form-fieldset{border:0; padding:0; margin:0; text-align:left}
-.form-fieldset .form-label{justify-content:flex-start}
-.radio-row{display:flex; align-items:center; justify-content:flex-start; gap:10px; font-weight:700; margin-top:8px}
-
-.form-note{
-  margin:0;
-  color:var(--muted);
-  font-size:0.95em;
-}
-
-@media (max-width:768px){
-  .contact-form{gap:18px}
+  .card-like img{max-height:220px}
 }
