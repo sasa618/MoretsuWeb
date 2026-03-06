@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" role="img" aria-labelledby="title desc">
+  <title id="title">サンプル画像3</title>
+  <desc id="desc">縦長のサンプル人物画像3</desc>
+  <rect width="600" height="900" fill="#f4ddc2"/>
+  <circle cx="300" cy="300" r="96" fill="#f59e0b"/>
+  <rect x="165" y="430" width="270" height="310" rx="18" fill="#ea580c"/>
+  <text x="300" y="842" font-family="sans-serif" font-size="42" fill="#8d4b00" text-anchor="middle">SAMPLE 03</text>
+</svg>
