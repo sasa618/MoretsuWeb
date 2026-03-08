@@ -10,7 +10,7 @@
   --about-border: #f6dec1;
 }
 
-.page {
+body[data-page='about'] {
   background: var(--about-bg);
 }
 
