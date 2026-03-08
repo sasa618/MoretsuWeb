@@ -31,7 +31,7 @@ body{
   margin:0;
   font-family:"Noto Sans JP", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   color:var(--text);
-  background:var(--bg);
+  background:#121212;
   font-size:var(--font-body);
   line-height:1.7;
 }
@@ -92,6 +92,7 @@ img{max-width:100%; height:auto; display:block}
 
 .nav a.is-active,
 body[data-page="about"] .nav a[data-link="about"],
+body[data-page="member"] .nav a[data-link="member"],
 body[data-page="service"] .nav a[data-link="service"],
 body[data-page="news"] .nav a[data-link="news"]{
   background:var(--primary);
