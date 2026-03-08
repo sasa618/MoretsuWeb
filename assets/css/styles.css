@@ -31,7 +31,7 @@ body{
   margin:0;
   font-family:"Noto Sans JP", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   color:var(--text);
-  background:var(--bg);
+  background:#121212;
   font-size:var(--font-body);
   line-height:1.7;
 }
