@@ -5,7 +5,7 @@
   --about-page-text: #5f3c16;
 }
 
-.page {
+body[data-page='about'] {
   background: var(--about-page-bg);
 }
 
