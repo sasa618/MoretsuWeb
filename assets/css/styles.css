@@ -45,6 +45,8 @@ img{max-width:100%; height:auto; display:block}
   margin:0;
   min-height:100vh;
   background:var(--bg);
+  display:flex;
+  flex-direction:column;
 }
 
 .site-header{
@@ -103,7 +105,7 @@ body[data-page="news"] .nav a[data-link="news"]{
 .nav a.nav__cta{background:var(--primary); border-color:var(--primary); color:#fff}
 .nav a.nav__cta:hover{background:var(--primary-dark); border-color:var(--primary-dark)}
 
-main{padding:0 0 40px}
+main{padding:0 0 40px; flex:1 0 auto}
 
 .image-block{
   width:100vw;
