@@ -10,7 +10,7 @@
   --about-border: #f6dec1;
 }
 
-.page {
+body[data-page='about'] {
   background: var(--about-bg);
 }
 
@@ -69,9 +69,9 @@
 
 .member-card__image {
   width: 100%;
-  height: clamp(190px, 26vw, 240px);
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center;
 }
 
 .member-card__meta {
@@ -148,13 +148,13 @@
 
 .member-modal__image {
   width: 100%;
-  height: min(52vh, 460px);
+  height: min(62vh, 620px);
   border-radius: 14px;
   border: 1px solid #f4d7b5;
   background: #f8ead6;
   padding: 8px;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center;
 }
 
 .member-modal__text {
@@ -222,11 +222,9 @@
   }
 
   .member-modal__image {
-    width: min(100%, 240px);
-    height: 220px;
+    max-width: 240px;
+    height: auto;
     margin: 0 auto;
-    object-fit: cover;
-    object-position: center 24%;
   }
 
   .member-modal__name {
