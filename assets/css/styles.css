@@ -31,7 +31,7 @@ body{
   margin:0;
   font-family:"Noto Sans JP", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   color:var(--text);
-  background:var(--bg);
+  background:#121212;
   font-size:var(--font-body);
   line-height:1.7;
 }
@@ -45,6 +45,8 @@ img{max-width:100%; height:auto; display:block}
   margin:0;
   min-height:100vh;
   background:var(--bg);
+  display:flex;
+  flex-direction:column;
 }
 
 .site-header{
@@ -92,6 +94,7 @@ img{max-width:100%; height:auto; display:block}
 
 .nav a.is-active,
 body[data-page="about"] .nav a[data-link="about"],
+body[data-page="member"] .nav a[data-link="member"],
 body[data-page="service"] .nav a[data-link="service"],
 body[data-page="news"] .nav a[data-link="news"]{
   background:var(--primary);
@@ -102,7 +105,7 @@ body[data-page="news"] .nav a[data-link="news"]{
 .nav a.nav__cta{background:var(--primary); border-color:var(--primary); color:#fff}
 .nav a.nav__cta:hover{background:var(--primary-dark); border-color:var(--primary-dark)}
 
-main{padding:0 0 40px}
+main{padding:0 0 40px; flex:1 0 auto}
 
 .image-block{
   width:100vw;

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Member | Uniboost（仮）</title>
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260306" />
+    <link rel="stylesheet" href="../assets/css/member.css?v=20260306" />
+  </head>
+  <body data-page="member">
+    <div class="page">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="logo" href="../" aria-label="トップへ">
+            <img src="../assets/logo.png" alt="Logo" />
+          </a>
+          <nav class="nav" aria-label="グローバルナビゲーション">
+            <a href="../service/index.html" data-link="service">Service</a>
+            <a href="../member/index.html" data-link="member">Member</a>
+            <a href="../about/index.html" data-link="about">About</a>
+            <a href="../News/index.html" data-link="news">News</a>
+            <a class="nav__cta" href="../contact/index.html">お問い合わせ</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="section about-hero">
+          <h1 class="section-title">メンバー紹介</h1>
+          <p class="section-sub">
+            カードをタップすると、ページ遷移なしでメンバーのあいさつを確認できます。
+          </p>
+        </section>
+
+        <section class="section about-members" aria-labelledby="member-list-title">
+          <h2 id="member-list-title" class="about-members__title">Member List</h2>
+          <div id="memberGrid" class="member-grid" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <div id="memberModal" class="member-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="memberModalName">
+        <div class="member-modal__overlay" data-close="modal"></div>
+        <div class="member-modal__window">
+          <button class="member-modal__close" type="button" aria-label="閉じる" data-close="modal">×</button>
+          <div class="member-modal__content">
+            <img id="memberModalImage" src="" alt="" class="member-modal__image" />
+            <div class="member-modal__text">
+              <p id="memberModalRole" class="member-modal__role"></p>
+              <h3 id="memberModalName" class="member-modal__name"></h3>
+              <p id="memberModalGreeting" class="member-modal__greeting"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <p class="footer-brand">モーレツ</p>
+          <p class="footer-note">© 2026 Uniboost (temporary)</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../assets/js/main.js?v=20260306"></script>
+    <script src="../assets/js/member.js?v=20260306"></script>
+  </body>
+</html>
