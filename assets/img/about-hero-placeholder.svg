@@ -1,0 +1,8 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#DDE5F2"/>
+  <rect y="540" width="1280" height="260" fill="#AFC1DA"/>
+  <path d="M0 575L210 360L358 515L558 245L771 540L932 390L1105 585L1280 430V800H0V575Z" fill="#6E8FBF"/>
+  <path d="M0 625L180 500L342 596L506 438L676 615L865 484L1017 612L1280 465V800H0V625Z" fill="#35598F"/>
+  <circle cx="1017" cy="184" r="72" fill="#FFF7D1"/>
+  <text x="96" y="126" fill="#2C4F8E" font-family="Arial, sans-serif" font-size="44">Temporary Hero Image</text>
+</svg>

@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>About | Uniboost（仮）</title>
-    <link rel="stylesheet" href="../assets/css/styles.css?v=20260306" />
-    <link rel="stylesheet" href="../assets/css/about.css?v=20260306" />
+    <link rel="stylesheet" href="../assets/css/styles.css?v=20260319" />
+    <link rel="stylesheet" href="../assets/css/about.css?v=20260319" />
   </head>
   <body data-page="about">
     <div class="page">
@@ -24,10 +24,43 @@
         </div>
       </header>
 
-      <main>
+      <main class="about-main">
         <section class="section about-page">
-          <h1 class="section-title">About</h1>
-          <p class="section-sub">このページの内容は今後更新予定です。</p>
+          <div class="about-page__inner">
+            <h1 class="section-title about-page__title">About</h1>
+
+            <section class="about-hero" aria-labelledby="about-mission-title">
+              <div class="about-hero__image-wrap">
+                <img
+                  class="about-hero__image"
+                  src="../assets/img/about-hero-placeholder.svg"
+                  alt="仮のメインビジュアル"
+                />
+              </div>
+
+              <article class="about-hero__card">
+                <p class="about-eyebrow">Mission</p>
+                <h2 id="about-mission-title" class="about-hero__heading">Leading to<br />a new era</h2>
+                <p class="about-copy">
+                  新時代をつくるために。<br />
+                  私たちは、技術と人の可能性を掛け合わせながら、企業の変革を実装まで伴走するパートナーです。<br />
+                  挑戦を、成果へ。
+                </p>
+              </article>
+            </section>
+
+            <section class="about-leadership" aria-labelledby="about-leadership-title">
+              <div class="about-leadership__intro">
+                <p class="about-eyebrow">Leadership</p>
+                <h2 id="about-leadership-title" class="about-leadership__title">メッセージ</h2>
+                <p class="section-sub about-leadership__sub">
+                  参考レイアウトをもとに、既存サイトの構成に合わせて About ページとして再構成しています。
+                </p>
+              </div>
+
+              <div id="aboutCards" class="about-card-list" aria-live="polite"></div>
+            </section>
+          </div>
         </section>
       </main>
 
@@ -39,6 +72,7 @@
       </footer>
     </div>
 
-    <script src="../assets/js/main.js?v=20260306"></script>
+    <script src="../assets/js/main.js?v=20260319"></script>
+    <script src="../assets/js/about.js?v=20260319"></script>
   </body>
 </html>

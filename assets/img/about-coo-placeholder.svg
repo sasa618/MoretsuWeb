@@ -1,0 +1,7 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="900" fill="#E6E9EF"/>
+  <rect x="118" y="114" width="664" height="672" rx="36" fill="#F7F8FB"/>
+  <circle cx="450" cy="338" r="132" fill="#A9B0BE"/>
+  <path d="M252 726C252 596.765 356.765 492 486 492H414C543.235 492 648 596.765 648 726V786H252V726Z" fill="#7D8797"/>
+  <text x="450" y="122" text-anchor="middle" fill="#2C4F8E" font-family="Arial, sans-serif" font-size="42">COO Placeholder</text>
+</svg>
