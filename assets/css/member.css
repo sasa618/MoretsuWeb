@@ -43,7 +43,7 @@ body[data-page='about'] {
 
 .member-card {
   border: 1px solid var(--about-border);
-  border-radius: 18px;
+  border-radius: 4px;
   background: var(--about-card-bg);
   cursor: pointer;
   padding: 14px;
@@ -61,7 +61,7 @@ body[data-page='about'] {
 }
 
 .member-card__image-wrap {
-  border-radius: 14px;
+  border-radius: 2px;
   overflow: hidden;
   border: 1px solid #dedede;
   background: #f1f1f1;
@@ -114,7 +114,7 @@ body[data-page='about'] {
 .member-modal__window {
   position: relative;
   width: min(1020px, calc(100vw - 30px));
-  border-radius: 20px;
+  border-radius: 4px;
   background: var(--about-modal-bg);
   border: 1px solid #d0d0d0;
   border-top: 6px solid var(--about-orange);
@@ -129,7 +129,7 @@ body[data-page='about'] {
   color: #1f1f1f;
   width: 36px;
   height: 36px;
-  border-radius: 999px;
+  border-radius: 2px;
   font-size: 1.35rem;
   line-height: 1;
   font-weight: 700;

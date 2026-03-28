@@ -13,7 +13,7 @@
   --bg:#f9f9f9;
   --border:#e5e7eb;
   --shadow:0 10px 30px rgba(17,24,39,.08);
-  --radius:16px;
+  --radius:4px;
 
   /* Responsive step scales */
   --font-body:18px;
@@ -101,7 +101,7 @@ img{max-width:100%; height:auto; display:block}
   justify-content:center;
   padding:10px 16px;
   border:1px solid var(--border);
-  border-radius:999px;
+  border-radius:2px;
   font-size:var(--font-nav);
   font-weight:700;
   font-family:var(--font-en);
@@ -191,7 +191,7 @@ main{padding:0 0 40px; flex:1 0 auto}
   align-items:center;
   justify-content:center;
   padding:13px 20px;
-  border-radius:999px;
+  border-radius:2px;
   border:0;
   background:var(--primary);
   color:#fff;
@@ -376,7 +376,7 @@ body[data-page="contact"] .section{
   justify-content:center;
   margin-left:8px;
   padding:2px 8px;
-  border-radius:4px;
+  border-radius:2px;
   font-size:.72rem;
   font-weight:700;
   letter-spacing:.04em;
@@ -389,7 +389,7 @@ body[data-page="contact"] .section{
 .contact-form textarea{
   width:100%;
   border:1px solid #dadde4;
-  border-radius:4px;
+  border-radius:2px;
   padding:11px 12px;
   font:inherit;
   color:var(--text);
