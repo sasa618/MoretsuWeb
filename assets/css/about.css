@@ -73,7 +73,7 @@ body[data-page='about'] .page {
   color: #6f7785;
   font-size: 0.75rem;
   letter-spacing: 0.02em;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-en);
 }
 
 .about-hero__heading,
@@ -91,7 +91,7 @@ body[data-page='about'] .page {
   color: #333;
   font-size: 0.82rem;
   line-height: 1.9;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-jp);
 }
 
 .about-leadership__intro {
@@ -156,7 +156,7 @@ body[data-page='about'] .page {
   background: #1d4d93;
   color: #fff;
   font-size: 0.75rem;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-en);
   letter-spacing: 0.03em;
   transition: background-color 0.2s ease;
 }

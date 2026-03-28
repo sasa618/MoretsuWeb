@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap");
+
 /* ==========
-   Uniboost (仮) - Local Static Site
+   モーレツ - Local Static Site
    Clean Corporate Theme
    ========== */
 
@@ -23,17 +25,38 @@
   --section-padding-y:36px;
   --section-padding-x:24px;
   --content-max:1200px;
+  --font-en:"Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --font-jp:"Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
+html{
+  height:100%;
+  scrollbar-gutter:stable;
+}
+body{height:100%}
 body{
   margin:0;
-  font-family:"Noto Sans JP", system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-family:var(--font-jp);
   color:var(--text);
   background:#121212;
   font-size:var(--font-body);
   line-height:1.7;
+}
+
+.en{
+  font-family:var(--font-en);
+  font-weight:700;
+  letter-spacing:.02em;
+}
+
+.jp,
+.txt{
+  font-family:var(--font-jp);
+}
+
+.section-title .en{
+  font-weight:800;
 }
 
 a{color:inherit; text-decoration:none}
@@ -74,6 +97,7 @@ img{max-width:100%; height:auto; display:block}
   gap:10px;
   flex-wrap:wrap;
   justify-content:flex-end;
+  font-size:0;
 }
 
 .nav a{
@@ -85,9 +109,14 @@ img{max-width:100%; height:auto; display:block}
   border-radius:999px;
   font-size:var(--font-nav);
   font-weight:700;
+  font-family:var(--font-en);
   line-height:1;
   background:#fff;
   transition:.18s ease;
+}
+
+.nav a.nav__cta{
+  font-family:var(--font-jp);
 }
 
 .nav a:hover{border-color:var(--primary); color:var(--primary-dark)}
