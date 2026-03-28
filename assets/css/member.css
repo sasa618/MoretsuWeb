@@ -1,13 +1,13 @@
 :root {
-  --about-orange: #f59e0b;
-  --about-orange-dark: #9a3412;
-  --about-bg: #fffaf3;
-  --about-surface: #ffffff;
-  --about-card-bg: #fffdf9;
-  --about-modal-bg: #fffcf7;
+  --about-orange: #000000;
+  --about-orange-dark: #1f1f1f;
+  --about-bg: #f9f9f9;
+  --about-surface: #f9f9f9;
+  --about-card-bg: #f9f9f9;
+  --about-modal-bg: #f9f9f9;
   --about-text: #1f2937;
   --about-muted: #6b7280;
-  --about-border: #f6dec1;
+  --about-border: #d9d9d9;
 }
 
 body[data-page='about'] {
@@ -29,7 +29,7 @@ body[data-page='about'] {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: #cd7a1a;
+  color: #000;
 }
 
 .member-grid {
@@ -43,7 +43,7 @@ body[data-page='about'] {
 
 .member-card {
   border: 1px solid var(--about-border);
-  border-radius: 18px;
+  border-radius: 4px;
   background: var(--about-card-bg);
   cursor: pointer;
   padding: 14px;
@@ -55,16 +55,16 @@ body[data-page='about'] {
 .member-card:hover,
 .member-card:focus-visible {
   transform: translateY(-4px);
-  border-color: #f0c391;
+  border-color: #000;
   box-shadow: 0 18px 30px rgba(31, 41, 55, 0.13);
   outline: none;
 }
 
 .member-card__image-wrap {
-  border-radius: 14px;
+  border-radius: 2px;
   overflow: hidden;
-  border: 1px solid #f7e6d2;
-  background: #fbefde;
+  border: 1px solid #dedede;
+  background: #f1f1f1;
 }
 
 .member-card__image {
@@ -114,9 +114,9 @@ body[data-page='about'] {
 .member-modal__window {
   position: relative;
   width: min(1020px, calc(100vw - 30px));
-  border-radius: 20px;
+  border-radius: 4px;
   background: var(--about-modal-bg);
-  border: 1px solid #f2d6b5;
+  border: 1px solid #d0d0d0;
   border-top: 6px solid var(--about-orange);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
   min-height: min(78vh, 740px);
@@ -125,11 +125,11 @@ body[data-page='about'] {
 
 .member-modal__close {
   border: 0;
-  background: #f5efe6;
-  color: #8a3b12;
+  background: #ededed;
+  color: #1f1f1f;
   width: 36px;
   height: 36px;
-  border-radius: 999px;
+  border-radius: 2px;
   font-size: 1.35rem;
   line-height: 1;
   font-weight: 700;
@@ -149,9 +149,9 @@ body[data-page='about'] {
 .member-modal__image {
   width: 100%;
   height: min(62vh, 620px);
-  border-radius: 14px;
-  border: 1px solid #f4d7b5;
-  background: #f8ead6;
+  border-radius: 2px;
+  border: 1px solid #d8d8d8;
+  background: #f1f1f1;
   padding: 8px;
   object-fit: cover;
   object-position: center;
@@ -163,7 +163,7 @@ body[data-page='about'] {
 
 .member-modal__role {
   margin: 0;
-  color: #a84411;
+  color: #000;
   font-size: 0.95rem;
   font-weight: 800;
 }
@@ -172,17 +172,17 @@ body[data-page='about'] {
   margin: 8px 0 0;
   font-size: 2rem;
   line-height: 1.25;
-  color: #7f2f10;
+  color: #111;
 }
 
 .member-modal__greeting {
   margin: 14px 0 0;
-  color: #4b2e1d;
+  color: #222;
   line-height: 2.05;
   font-size: 1.1rem;
-  background: #fff7ec;
-  border-left: 4px solid #f59e0b;
-  border-radius: 8px;
+  background: #f3f3f3;
+  border-left: 4px solid #000;
+  border-radius: 2px;
   padding: 16px 16px;
   white-space: pre-line;
 }
