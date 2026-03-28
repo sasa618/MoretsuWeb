@@ -1,11 +1,11 @@
 /* Contact page specific styles */
 body[data-page="contact"] {
-  background: #f3f3f3;
+  background: #f9f9f9;
 }
 
 body[data-page="contact"] .site-header {
   position: static;
-  background: #fff;
+  background: #f9f9f9;
 }
 
 body[data-page="contact"] .section {
@@ -71,7 +71,7 @@ body[data-page="contact"] .section {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  background: #f57c00;
+  background: #000;
   color: #fff;
   vertical-align: middle;
 }
@@ -85,14 +85,14 @@ body[data-page="contact"] .section {
   padding: 11px 12px;
   font: inherit;
   color: var(--text);
-  background: #fff;
+  background: #f9f9f9;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #f57c00;
-  box-shadow: 0 0 0 3px rgba(245, 124, 0, 0.2);
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form .form-fieldset {
@@ -111,7 +111,7 @@ body[data-page="contact"] .section {
 }
 
 .contact-form .radio-row input[type="radio"] {
-  accent-color: #f57c00;
+  accent-color: #000;
   width: 16px;
   height: 16px;
 }
@@ -146,11 +146,11 @@ body[data-page="contact"] .section {
   margin-top: 8px;
   min-width: 170px;
   border-radius: 10px;
-  background: #f57c00;
+  background: #000;
 }
 
 .contact-form .btn:hover {
-  background: #d76100;
+  background: #1f1f1f;
 }
 
 @media (max-width: 700px) {
