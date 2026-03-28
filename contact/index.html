@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <base href="../">
-    <title>Contact | モーレツ</title>
+    <title>Contact | Uniboost（仮）</title>
     <link rel="stylesheet" href="assets/css/styles.css?v=20260328" />
     <link rel="stylesheet" href="assets/css/contact.css?v=20260328" />
   </head>
@@ -16,11 +16,11 @@
             <img src="assets/logo.png" alt="Logo" />
           </a>
           <nav class="nav" aria-label="グローバルナビゲーション">
-            <a href="service/index.html" data-link="service"><span class="en">Service</span></a>
-            <a href="member/index.html" data-link="member"><span class="en">Member</span></a>
-            <a href="about/index.html" data-link="about"><span class="en">About</span></a>
-            <a href="News/" data-link="news"><span class="en">News</span></a>
-            <a class="nav__cta" href="contact/index.html" data-link="contact"><span class="jp">お問い合わせ</span></a>
+            <a href="service/index.html" data-link="service">Service</a>
+            <a href="member/index.html" data-link="member">Member</a>
+            <a href="about/index.html" data-link="about">About</a>
+            <a href="News/" data-link="news">News</a>
+            <a class="nav__cta" href="contact/index.html" data-link="contact">お問い合わせ</a>
           </nav>
         </div>
       </header>
@@ -66,8 +66,9 @@
               <textarea name="message" rows="8" required></textarea>
             </label>
 
-            <p class="form-note txt">入力完了後「メール送付」を押すと、メールアプリが起動します。</p>
-            <button type="submit" class="btn"><span class="jp">メール送付</span></button>
+            <p class="form-note">入力完了後「送信する」を押すと、内容が自動送信されます。</p>
+            <p id="contactStatus" class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn" id="contactSubmitButton">送信する</button>
           </form>
         </section>
       </main>
@@ -75,7 +76,7 @@
       <footer class="site-footer">
         <div class="footer-inner">
           <p class="footer-brand jp">モーレツ</p>
-          <p class="footer-note">© 2026 モーレツ</p>
+          <p class="footer-note">© 2026 Uniboost (temporary)</p>
         </div>
       </footer>
     </div>
