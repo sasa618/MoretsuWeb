@@ -97,6 +97,7 @@ img{max-width:100%; height:auto; display:block}
 
 .nav a{
   display:inline-flex;
+  position:relative;
   align-items:center;
   justify-content:center;
   padding:10px 16px;
@@ -107,6 +108,7 @@ img{max-width:100%; height:auto; display:block}
   font-family:var(--font-en);
   line-height:1;
   background:#f9f9f9;
+  overflow:hidden;
   transition:.18s ease;
 }
 
@@ -131,7 +133,9 @@ img{max-width:100%; height:auto; display:block}
   color:var(--primary-dark);
 }
 
-.nav a:hover::after{
+.nav a:hover::after,
+.nav a:focus-visible::after,
+.nav a:active::after{
   transform:scaleX(1);
 }
 
