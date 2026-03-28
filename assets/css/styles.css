@@ -104,9 +104,14 @@ img{max-width:100%; height:auto; display:block}
   border-radius:999px;
   font-size:var(--font-nav);
   font-weight:700;
+  font-family:var(--font-en);
   line-height:1;
   background:#fff;
   transition:.18s ease;
+}
+
+.nav a.nav__cta{
+  font-family:var(--font-jp);
 }
 
 .nav a:hover{border-color:var(--primary); color:var(--primary-dark)}
