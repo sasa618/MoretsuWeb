@@ -101,7 +101,7 @@ img{max-width:100%; height:auto; display:block}
   align-items:center;
   justify-content:center;
   padding:10px 16px;
-  border:1px solid var(--border);
+  border:none;
   border-radius:2px;
   font-size:var(--font-nav);
   font-weight:700;
