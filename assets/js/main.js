@@ -4,7 +4,6 @@
   if (!form) return;
   const submitButton = document.getElementById('contactSubmitButton');
   const statusEl = document.getElementById('contactStatus');
-  const endpoint = 'https://formsubmit.co/h2210507@gl.cc.uec.ac.jp';
 
   function setStatus(message, state) {
     if (!statusEl) return;
@@ -16,41 +15,7 @@
     }
   }
 
-  function ensureSubmitFrame() {
-    let frame = document.getElementById('contactSubmitFrame');
-    if (frame) return frame;
-
-    frame = document.createElement('iframe');
-    frame.id = 'contactSubmitFrame';
-    frame.name = 'contactSubmitFrame';
-    frame.hidden = true;
-    frame.setAttribute('aria-hidden', 'true');
-    document.body.appendChild(frame);
-    return frame;
-  }
-
-  function sendByHiddenForm(payload) {
-    const frame = ensureSubmitFrame();
-    const tempForm = document.createElement('form');
-    tempForm.method = 'POST';
-    tempForm.action = endpoint;
-    tempForm.target = frame.name;
-    tempForm.style.display = 'none';
-
-    Object.entries(payload).forEach(function ([key, value]) {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = key;
-      input.value = String(value);
-      tempForm.appendChild(input);
-    });
-
-    document.body.appendChild(tempForm);
-    tempForm.submit();
-    document.body.removeChild(tempForm);
-  }
-
-  form.addEventListener('submit', function (event) {
+  form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     if (!form.reportValidity()) return;
@@ -67,28 +32,36 @@
     if (submitButton) submitButton.disabled = true;
 
     try {
-      sendByHiddenForm({
-        _subject: `【お問い合わせ】${summary} / ${name}`,
-        _captcha: 'false',
-        _template: 'table',
-        _replyto: email,
-        name,
-        company,
-        email,
-        phone: phone || '未入力',
-        summary,
-        message,
+      const response = await fetch('https://formsubmit.co/ajax/h2210507@gl.cc.uec.ac.jp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: `【お問い合わせ】${summary} / ${name}`,
+          _captcha: 'false',
+          _template: 'table',
+          name,
+          company,
+          email,
+          phone: phone || '未入力',
+          summary,
+          message,
+        }),
       });
-      setStatus(
-        '送信処理を受け付けました。※初回のみ、宛先メールに届く確認メールで有効化が必要です。',
-        'success'
-      );
+
+      if (!response.ok) {
+        throw new Error(`Failed to send inquiry. status=${response.status}`);
+      }
+
+      setStatus('お問い合わせを送信しました。ありがとうございます。', 'success');
       form.reset();
     } catch (error) {
       console.error(error);
       setStatus('送信に失敗しました。時間をおいて再度お試しください。', 'error');
+    } finally {
+      if (submitButton) submitButton.disabled = false;
     }
-
-    if (submitButton) submitButton.disabled = false;
   });
 })();
