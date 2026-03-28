@@ -145,7 +145,7 @@ body[data-page="contact"] .section {
   align-self: flex-start;
   margin-top: 8px;
   min-width: 170px;
-  border-radius: 2px;
+  border-radius: 10px;
   background: #000;
 }
 
