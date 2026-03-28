@@ -114,7 +114,35 @@ img{max-width:100%; height:auto; display:block}
   font-family:var(--font-jp);
 }
 
-.nav a:hover{border-color:var(--primary); color:var(--primary-dark)}
+.nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:2px;
+  background:var(--primary);
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .24s ease;
+}
+
+.nav a:hover{
+  color:var(--primary-dark);
+}
+
+.nav a:hover::after{
+  transform:scaleX(1);
+}
+
+.nav a.is-active::after,
+body[data-page="about"] .nav a[data-link="about"]::after,
+body[data-page="member"] .nav a[data-link="member"]::after,
+body[data-page="service"] .nav a[data-link="service"]::after,
+body[data-page="news"] .nav a[data-link="news"]::after,
+.nav a.nav__cta::after{
+  background:#fff;
+}
 
 .nav a.is-active,
 body[data-page="about"] .nav a[data-link="about"],
@@ -122,12 +150,11 @@ body[data-page="member"] .nav a[data-link="member"],
 body[data-page="service"] .nav a[data-link="service"],
 body[data-page="news"] .nav a[data-link="news"]{
   background:var(--primary);
-  border-color:var(--primary);
   color:#fff;
 }
 
-.nav a.nav__cta{background:var(--primary); border-color:var(--primary); color:#fff}
-.nav a.nav__cta:hover{background:var(--primary-dark); border-color:var(--primary-dark)}
+.nav a.nav__cta{background:var(--primary); color:#fff}
+.nav a.nav__cta:hover{background:var(--primary-dark)}
 
 main{padding:0 0 40px; flex:1 0 auto}
 
