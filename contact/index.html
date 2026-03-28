@@ -66,8 +66,9 @@
               <textarea name="message" rows="8" required></textarea>
             </label>
 
-            <p class="form-note">入力完了後「メール送付」を押すと、メールアプリが起動します。</p>
-            <button type="submit" class="btn">メール送付</button>
+            <p class="form-note">入力完了後「送信する」を押すと、内容が自動送信されます。</p>
+            <p id="contactStatus" class="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn" id="contactSubmitButton">送信する</button>
           </form>
         </section>
       </main>

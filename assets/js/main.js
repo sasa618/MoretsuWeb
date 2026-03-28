@@ -2,8 +2,20 @@
 (function () {
   const form = document.getElementById('contactForm');
   if (!form) return;
+  const submitButton = document.getElementById('contactSubmitButton');
+  const statusEl = document.getElementById('contactStatus');
 
-  form.addEventListener('submit', function (event) {
+  function setStatus(message, state) {
+    if (!statusEl) return;
+    statusEl.textContent = message;
+    if (state) {
+      statusEl.dataset.state = state;
+    } else {
+      delete statusEl.dataset.state;
+    }
+  }
+
+  form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     if (!form.reportValidity()) return;
@@ -16,20 +28,40 @@
     const summary = String(data.get('summary') || '').trim();
     const message = String(data.get('message') || '').trim();
 
-    const to = 'info@example.com';
-    const subject = `【お問い合わせ】${summary} / ${name}`;
-    const body = [
-      `お名前: ${name}`,
-      `会社名: ${company}`,
-      `メアド: ${email}`,
-      `電話番号: ${phone || '未入力'}`,
-      `問い合わせ概要: ${summary}`,
-      '',
-      'お問い合わせ内容:',
-      message,
-    ].join('\n');
+    setStatus('送信中です。しばらくお待ちください...', 'sending');
+    if (submitButton) submitButton.disabled = true;
 
-    const mailto = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/h2210507@gl.cc.uec.ac.jp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: `【お問い合わせ】${summary} / ${name}`,
+          _captcha: 'false',
+          _template: 'table',
+          name,
+          company,
+          email,
+          phone: phone || '未入力',
+          summary,
+          message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to send inquiry. status=${response.status}`);
+      }
+
+      setStatus('お問い合わせを送信しました。ありがとうございます。', 'success');
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      setStatus('送信に失敗しました。時間をおいて再度お試しください。', 'error');
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 })();
