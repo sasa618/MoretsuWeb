@@ -4,7 +4,7 @@
   const leaders = {
     ceo: {
       role: '代表取締役CEO',
-      name: '三橋 威吹',
+      name: '三橋智大',
       image: '../assets/img/about-ceo-placeholder.svg',
       imageAlt: 'CEOポートレート',
       raw: `*技術を知り、現場を知り、社会の痛みを知る。\nテクノロジーとビジネスを繋ぐ課題解決能力。\nその両方を持つからこそ、辿り着いた今について 。*
