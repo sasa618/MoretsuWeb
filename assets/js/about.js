@@ -3,28 +3,28 @@
 
   const members = [
     {
-      eyebrow: 'Strategy',
-      heading: 'Promote<br>transformation',
-      title: '要約版CEOメッセージ',
+      eyebrow: 'CEO Message',
+      heading: 'Ignite life<br>with intention',
+      title: '代表取締役CEO 三橋 威吹',
       copy:
-        '生成AI・業務改革の推進をテーマにした要約メッセージです。意思決定のスピードを高め、現場の実行まで一貫して伴走する姿勢を表現しています。',
-      buttonLabel: 'Service Top',
-      buttonHref: '../service/index.html',
-      linkLabel: 'CEOインタビュー（仮） →',
+        'メッセージ全文は Member ページにて掲載しています。\n省略メッセージは Member 一覧、本文は詳細ページでご覧ください。',
+      buttonLabel: 'CEO本文を見る',
+      buttonHref: '../member/detail.html?id=ceo',
+      linkLabel: 'CEOインタビュー（準備中）',
       image: '../assets/img/about-ceo-placeholder.svg',
-      imageAlt: '仮のCEOポートレート',
+      imageAlt: 'CEOポートレート',
     },
     {
-      eyebrow: 'Strategy',
-      heading: 'Promote<br>transformation',
-      title: '要約版COOメッセージ',
+      eyebrow: 'COO Message',
+      heading: 'Build a<br>winning field',
+      title: '取締役COO 井上 颯大',
       copy:
-        '生成AI・業務改革の推進をテーマにした要約メッセージです。現場との対話を通じて、変革を定着させるための設計と実装を支える内容にしています。',
-      buttonLabel: 'Contact',
-      buttonHref: '../contact/index.html',
-      linkLabel: 'COOインタビュー（仮） →',
+        'メッセージ全文は Member ページにて掲載しています。\n省略メッセージは Member 一覧、本文は詳細ページでご覧ください。',
+      buttonLabel: 'COO本文を見る',
+      buttonHref: '../member/detail.html?id=coo',
+      linkLabel: 'COOインタビュー（準備中）',
       image: '../assets/img/about-coo-placeholder.svg',
-      imageAlt: '仮のCOOポートレート',
+      imageAlt: 'COOポートレート',
     },
   ];
 
@@ -40,7 +40,7 @@
             <p class="about-eyebrow">${member.eyebrow}</p>
             <h3 class="about-card__heading">${member.heading}</h3>
             <p class="about-card__jp-title">${member.title}</p>
-            <p class="about-card__copy">${member.copy}</p>
+            <p class="about-card__copy">${member.copy.replaceAll('\n', '<br />')}</p>
             <a class="about-card__button" href="${member.buttonHref}">${member.buttonLabel}</a>
             <div class="about-card__link">${member.linkLabel}</div>
           </div>
