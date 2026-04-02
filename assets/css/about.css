@@ -309,46 +309,6 @@ body[data-page='about-detail'] {
   font-size: 1rem;
 }
 
-.about-detail__inline {
-  display: inline;
-}
-
-.about-detail__inline--single {
-  font-style: italic;
-  font-weight: 600;
-}
-
-.about-detail__inline--double {
-  font-weight: 800;
-  font-size: 1.08em;
-}
-
-.about-detail__inline--triple {
-  font-weight: 800;
-  font-size: 1.16em;
-  letter-spacing: 0.01em;
-}
-
-.about-detail__bio {
-  padding: 22px 24px;
-  background: #f8fafc;
-  border: 1px solid #dbe3ef;
-}
-
-.about-detail__bio-heading {
-  margin: 0 0 8px;
-  font-size: 1.02rem;
-  font-weight: 800;
-  line-height: 1.6;
-}
-
-.about-detail__bio-text {
-  margin: 0;
-  font-size: 0.94rem;
-  line-height: 1.9;
-  color: #374151;
-}
-
 
 .about-detail__section {
   padding: 30px;
