@@ -251,6 +251,10 @@ body[data-page="top"] .float-item.is-inview{
   animation:top-soft-float 5.8s ease-in-out infinite;
 }
 
+body[data-page="top"] .contact-box.float-item.is-inview{
+  animation:none;
+}
+
 @keyframes top-soft-float{
   0%,100%{transform:translateY(0) scale(1);}
   50%{transform:translateY(-8px) scale(1);}
