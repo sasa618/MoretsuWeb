@@ -31,8 +31,9 @@ AIの急速な発展により、平均的な作業やスキルの価値は失わ
 なぜ、安定を捨ててまで学生起業という道を選んだのか。
 それは、誰かに用意された選択肢の中から選ぶのではなく、自ら選んだ道を切り開いていきたかったからです。自分のビジョンを現実にするには、自ら旗を掲げ、全責任を背負って荒野を切り拓く道しかありませんでした。この決断は、自分一人のためではありません。共に歩む社員、そしてその背後にいる家族までが、自分の人生を誇れるようでなければ、組織としての成功はないと考えています。
 「今が、失敗を恐れずに挑戦できるラストチャンスかもしれない」
-その切実な危機感を武器に、私はこの挑戦にすべてを賭けています。私たちは、「自らの選択を、自らの力で正解に導くこと」にこだわり、人生そのものをモーレツに肯定できる集団であり続けます。`,
-      bio: '電気通信大学大学院 博士後期課程在学中。シミュレーション科学・人工知能の研究に従事しながら、エンジニアリングとマーケティングの両領域でフリーランスとして実務経験を積む。テクノロジーとビジネスをつなぐ力を軸に、環境課題や人口減少といった社会課題の解決を目指し、株式会社モーレツを設立。',
+その切実な危機感を武器に、私はこの挑戦にすべてを賭けています。私たちは、「自らの選択を、自らの力で正解に導くこと」にこだわり、人生そのものをモーレツに肯定できる集団であり続けます。
+
+電気通信大学大学院 博士後期課程在学中。シミュレーション科学・人工知能の研究に従事しながら、エンジニアリングとマーケティングの両領域でフリーランスとして実務経験を積む。テクノロジーとビジネスをつなぐ力を軸に、環境課題や人口減少といった社会課題の解決を目指し、株式会社モーレツを設立。`,
     },
     coo: {
       role: '取締役COO',
@@ -64,9 +65,9 @@ AIの急速な発展により、平均的な作業やスキルの価値は失わ
 **挑戦の連続で、自分を磨け。\n　個の熱狂を、日本全体の生産性向上へ。**
 私たちは、人生の約3分の1という膨大な時間を「仕事」に費やしています。この時間がただ耐えるだけのものだとしたら、人生そのものを負け越しているのと同じではないでしょうか。仕事という3分の1の時間で勝てない人生は、決して楽しくない。だからこそ、私たちは「仕事で圧倒的に勝つこと」にこだわります。
 「命をモーレツに」というミッションを体現し、社員だけでなくそのご家族までが誇れる組織でありたい。HRという変革の激しい領域において、常にマーケットの動きを先読みし、個々の能力を最大化させる環境を構築します。モーレツな個人が集まり、モーレツな集団として勝つ。その挑戦の連続が、これからの日本全体の生産性向上につながると確信しています。
-`,
-      bioHeading: '井上颯大 / SoutaInoue',
-      bio: '2004年、新潟県三条市生まれ。幼少期の小児がん（腎明細胞肉腫）の闘病経験から医療の道を志すも、医療系スタートアップとの出会いを機に「仕組みによる社会インパクト」の創出を追求する。18歳から営業代行や事業開発、組織立ち上げを経験し、複数のベンチャー企業で現場と戦略の両面から経営を推進。2025年10月、株式会社モーレツを創業し取締役COOに就任。現在は組織とテクノロジーを軸とした実行型パートナーとして、企業の非連続的な成長を加速させている。開志専門職大学在学中。',
+
+***井上颯大 / SoutaInoue***
+2004年、新潟県三条市生まれ。幼少期の小児がん（腎明細胞肉腫）の闘病経験から医療の道を志すも、医療系スタートアップとの出会いを機に「仕組みによる社会インパクト」の創出を追求する。18歳から営業代行や事業開発、組織立ち上げを経験し、複数のベンチャー企業で現場と戦略の両面から経営を推進。2025年10月、株式会社モーレツを創業し取締役COOに就任。現在は組織とテクノロジーを軸とした実行型パートナーとして、企業の非連続的な成長を加速させている。開志専門職大学在学中。`,
     },
   };
 
@@ -79,25 +80,11 @@ AIの急速な発展により、平均的な作業やスキルの価値は失わ
       .replaceAll("'", '&#39;');
   }
 
-  function renderInline(value) {
-    return escapeHtml(value)
-      .replace(/\*\*\*(.+?)\*\*\*/g, '<span class="about-detail__inline about-detail__inline--triple">$1</span>')
-      .replace(/\*\*(.+?)\*\*/g, '<span class="about-detail__inline about-detail__inline--double">$1</span>')
-      .replace(/\*(.+?)\*/g, '<span class="about-detail__inline about-detail__inline--single">$1</span>')
-      .replaceAll('*', '')
-      .replaceAll('\n', '<br />');
+  function toHtmlWithBreaks(value) {
+    return escapeHtml(value).replaceAll('\n', '<br />');
   }
 
   function renderRaw(raw) {
-    function renderBodyText(text) {
-      return text
-        .split('\n')
-        .map((line) => line.trim())
-        .filter(Boolean)
-        .map((line) => `<p class="about-detail__block about-detail__block--body">${renderInline(line)}</p>`)
-        .join('');
-    }
-
     return raw
       .split(/\n\s*\n/)
       .map((block) => block.trim())
@@ -107,39 +94,25 @@ AIの急速な発展により、平均的な作業やスキルの価値は失わ
 
         const hasTripleStart = block.startsWith('***');
         const hasTripleEnd = block.endsWith('***');
-        if (hasTripleStart && hasTripleEnd) {
+        if (hasTripleStart || hasTripleEnd) {
           const text = block
             .replace(/^\*\*\*/, '')
             .replace(/\*\*\*$/, '')
             .trim();
-          return `<p class="about-detail__block about-detail__block--triple">${renderInline(text)}</p>`;
+          return `<p class="about-detail__block about-detail__block--triple">${toHtmlWithBreaks(text)}</p>`;
         }
 
-        if (block.startsWith('**')) {
-          const closeIndex = block.indexOf('**', 2);
-          if (closeIndex > 2) {
-            const headingText = block.slice(2, closeIndex).trim();
-            const bodyText = block.slice(closeIndex + 2).trim();
-            return `
-              <h2 class="about-detail__block about-detail__block--double">${renderInline(headingText)}</h2>
-              ${bodyText ? renderBodyText(bodyText) : ''}
-            `;
-          }
+        if (block.startsWith('**') && block.endsWith('**')) {
+          const text = block.slice(2, -2).trim();
+          return `<h2 class="about-detail__block about-detail__block--double">${toHtmlWithBreaks(text)}</h2>`;
         }
 
-        if (block.startsWith('*')) {
-          const closeIndex = block.indexOf('*', 1);
-          if (closeIndex > 1) {
-            const leadText = block.slice(1, closeIndex).trim();
-            const bodyText = block.slice(closeIndex + 1).trim();
-            return `
-              <p class="about-detail__block about-detail__block--single">${renderInline(leadText)}</p>
-              ${bodyText ? renderBodyText(bodyText) : ''}
-            `;
-          }
+        if (block.startsWith('*') && block.endsWith('*')) {
+          const text = block.slice(1, -1).trim();
+          return `<p class="about-detail__block about-detail__block--single">${toHtmlWithBreaks(text)}</p>`;
         }
 
-        return renderBodyText(block);
+        return `<p class="about-detail__block about-detail__block--body">${toHtmlWithBreaks(block)}</p>`;
       })
       .join('');
   }
@@ -165,14 +138,6 @@ AIの急速な発展により、平均的な作業やスキルの価値は失わ
       <article class="about-detail__article">
         ${renderRaw(leader.raw)}
       </article>
-      <aside class="about-detail__bio">
-        ${
-          leader.bioHeading
-            ? `<p class="about-detail__bio-heading">${renderInline(`***${leader.bioHeading}***`)}</p>`
-            : ''
-        }
-        <p class="about-detail__bio-text">${renderInline(leader.bio)}</p>
-      </aside>
     </div>
   `;
 })();
