@@ -11,7 +11,15 @@ body[data-page='about'] {
   background: var(--about-bg);
 }
 
+body[data-page='about-detail'] {
+  background: var(--about-bg);
+}
+
 body[data-page='about'] .page {
+  background: transparent;
+}
+
+body[data-page='about-detail'] .page {
   background: transparent;
 }
 
@@ -170,6 +178,66 @@ body[data-page='about'] .page {
   line-height: 1.15;
 }
 
+.about-detail {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+}
+
+.about-detail__inner {
+  background: #fff;
+  padding: 28px;
+}
+
+.about-detail__back {
+  display: inline-block;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #111;
+  color: #111;
+  font-size: 0.85rem;
+}
+
+.about-detail__layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.about-detail__image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #efefef;
+}
+
+.about-detail__role {
+  margin: 0;
+  color: #666;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.about-detail__name {
+  margin: 8px 0 18px;
+  font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+}
+
+.about-detail__body {
+  color: #1f1f1f;
+  line-height: 2;
+}
+
+.about-detail__body strong {
+  display: block;
+  margin: 22px 0 8px;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.about-detail__body em {
+  font-style: italic;
+}
+
 @media (max-width: 900px) {
   .about-page__title {
     text-align: center;
@@ -199,5 +267,14 @@ body[data-page='about'] .page {
 
   .about-card__body {
     padding: 28px 24px 26px;
+  }
+
+  .about-detail__layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-detail__image {
+    max-width: 360px;
   }
 }
