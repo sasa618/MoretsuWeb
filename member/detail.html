@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Member | モーレツ（仮）</title>
+    <title>Member Detail | モーレツ（仮）</title>
     <link rel="stylesheet" href="../assets/css/styles.css?v=20260402" />
     <link rel="stylesheet" href="../assets/css/member.css?v=20260402" />
   </head>
-  <body data-page="member">
+  <body data-page="member-detail">
     <div class="page">
       <header class="site-header">
         <div class="header-inner">
@@ -25,17 +25,7 @@
       </header>
 
       <main>
-        <section class="section member-intro">
-          <p class="member-intro__lead en">TEAM MEMBERS</p>
-          <h1 class="member-intro__title jp">メンバー紹介</h1>
-          <p class="member-intro__sub txt">役職で絞り込みを行い、気になるメンバーをクリックして詳細をご覧ください。</p>
-        </section>
-
-        <section class="section member-list" aria-labelledby="member-list-title">
-          <h2 id="member-list-title" class="sr-only">メンバー一覧</h2>
-          <div class="member-filter" id="memberFilter" aria-label="役職フィルター"></div>
-          <div id="memberGrid" class="member-grid" aria-live="polite"></div>
-        </section>
+        <section class="section member-detail" id="memberDetail" aria-live="polite"></section>
       </main>
 
       <footer class="site-footer">
