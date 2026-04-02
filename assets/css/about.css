@@ -309,6 +309,28 @@ body[data-page='about-detail'] {
   font-size: 1rem;
 }
 
+.about-detail__bio {
+  margin-top: 18px;
+  padding: 20px 22px;
+  background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+  border: 1px solid #dbe4ff;
+  border-radius: 10px;
+}
+
+.about-detail__bio-title {
+  margin: 0 0 10px;
+  color: #1f2937;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.about-detail__bio-text {
+  margin: 0;
+  color: #374151;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
 
 .about-detail__section {
   padding: 30px;
