@@ -32,7 +32,7 @@
     if (submitButton) submitButton.disabled = true;
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/h2210507@gl.cc.uec.ac.jp', {
+      const response = await fetch('https://formsubmit.co/ajax/info@moretsu-inc.jp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
