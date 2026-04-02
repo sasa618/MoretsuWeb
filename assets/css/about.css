@@ -274,19 +274,15 @@ body[data-page='about-detail'] {
   gap: 24px;
 }
 
-.about-detail__intro,
-.about-detail__body {
+.about-detail__section {
   padding: 30px;
   background: #fff;
-  border: 1px solid #e5e7eb;
+  border-left: 5px solid #111;
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
 }
 
 .about-detail__section-title {
-  margin: 0;
-  padding: 20px 24px;
-  border-left: 5px solid #111;
-  background: #f8fafc;
+  margin: 0 0 14px;
   font-size: clamp(1.25rem, 2.6vw, 2rem);
   line-height: 1.4;
 }
@@ -298,50 +294,8 @@ body[data-page='about-detail'] {
   line-height: 1.95;
 }
 
-.about-detail__section-title + .about-detail__text {
-  margin-top: 18px;
-}
-
 .about-detail__text + .about-detail__text {
   margin-top: 10px;
-}
-
-.about-detail__raw-text {
-  margin: 0;
-  color: #1f2937;
-  font-size: 1rem;
-  line-height: 1.95;
-}
-
-.about-detail__accent {
-  margin: 18px 0 0;
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  line-height: 1.5;
-  font-weight: 700;
-}
-
-.about-detail__profile-title {
-  margin: 22px 0 0;
-  font-size: 1.12rem;
-  font-weight: 700;
-}
-
-.about-detail__profile {
-  margin: 10px 0 0;
-  padding-top: 16px;
-  border-top: 1px solid #d1d5db;
-  color: #374151;
-  line-height: 1.9;
-}
-
-.about-detail__intro-title {
-  margin: 0 0 12px;
-  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
-}
-
-.about-detail__intro-body {
-  margin: 0;
-  line-height: 1.9;
 }
 
 @media (max-width: 900px) {
