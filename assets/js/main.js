@@ -65,3 +65,40 @@
     }
   });
 })();
+
+/* Top page: soft floating reveal */
+(function () {
+  const body = document.body;
+  if (!body || body.dataset.page !== 'top') return;
+
+  const targets = document.querySelectorAll(
+    '.image-block img, .section-title, .section-sub, .card-like, .contact-box, .btn'
+  );
+
+  if (!targets.length) return;
+
+  targets.forEach((element) => element.classList.add('float-item'));
+
+  if (!('IntersectionObserver' in window)) {
+    targets.forEach((element) => element.classList.add('is-inview'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-inview');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.18,
+      rootMargin: '0px 0px -8% 0px',
+    }
+  );
+
+  targets.forEach((element) => observer.observe(element));
+})();
+

@@ -236,6 +236,36 @@ main{padding:0 0 40px; flex:1 0 auto}
 .footer-brand{margin:0; font-size:var(--font-footer-brand); font-weight:900; letter-spacing:.01em}
 .footer-note{margin:0; font-size:14px; opacity:.85}
 
+
+/* Top page: soft float-in animation */
+body[data-page="top"] .float-item{
+  opacity:0;
+  transform:translateY(28px) scale(.985);
+  transition:opacity .75s ease, transform .9s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+
+body[data-page="top"] .float-item.is-inview{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  animation:top-soft-float 5.8s ease-in-out infinite;
+}
+
+@keyframes top-soft-float{
+  0%,100%{transform:translateY(0) scale(1);}
+  50%{transform:translateY(-8px) scale(1);}
+}
+
+@media (prefers-reduced-motion: reduce){
+  body[data-page="top"] .float-item,
+  body[data-page="top"] .float-item.is-inview{
+    opacity:1;
+    transform:none;
+    transition:none;
+    animation:none;
+  }
+}
+
 /* Step 1 */
 @media (max-width:1400px){
   :root{
