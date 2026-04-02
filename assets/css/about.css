@@ -269,10 +269,46 @@ body[data-page='about-detail'] {
   font-weight: 600;
 }
 
-.about-detail__body {
+
+.about-detail__article {
   display: grid;
-  gap: 24px;
+  gap: 16px;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
 }
+
+.about-detail__block {
+  margin: 0;
+  color: #1f2937;
+  line-height: 1.9;
+}
+
+.about-detail__block--single {
+  font-size: clamp(1.15rem, 2.7vw, 1.7rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.about-detail__block--double {
+  margin-top: 12px;
+  font-size: clamp(1.2rem, 2.8vw, 1.9rem);
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.about-detail__block--triple {
+  font-size: 1.03rem;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.about-detail__block--body {
+  font-size: 1rem;
+}
+
 
 .about-detail__section {
   padding: 30px;
