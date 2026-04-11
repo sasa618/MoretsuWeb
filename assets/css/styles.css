@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap");
 
 /* ==========
    モーレツ - Local Static Site
@@ -25,8 +25,8 @@
   --section-padding-y:36px;
   --section-padding-x:24px;
   --content-max:1200px;
-  --font-en:"Montserrat", "Avenir Next", "Segoe UI", sans-serif;
-  --font-jp:"Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  --font-en:"Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --font-jp:"Zen Kaku Gothic New", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
 }
 
 *{box-sizing:border-box}
