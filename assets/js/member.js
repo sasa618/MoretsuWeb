@@ -1,4 +1,7 @@
 (function () {
+  const PAGE = document.body.dataset.page;
+  const ALL_ROLE = 'すべて';
+
   const members = [
     {
       id: 'member-1',
@@ -38,45 +41,64 @@
       .replaceAll("'", '&#39;');
   }
 
+  function renderFilterButton(role, selectedRole) {
+    const activeClass = role === selectedRole ? 'is-active' : '';
+    const escapedRole = escapeHtml(role);
+    return `
+      <button type="button" class="member-filter__btn ${activeClass}" data-role="${escapedRole}">
+        ${escapedRole}
+      </button>
+    `;
+  }
+
+  function renderMemberCard(member) {
+    return `
+      <a class="member-card" href="./detail.html?id=${encodeURIComponent(member.id)}" aria-label="${escapeHtml(member.name)}の詳細を見る">
+        <div class="member-card__image-wrap">
+          <img class="member-card__image" src="${member.image}" alt="${escapeHtml(member.imageAlt)}" loading="lazy" />
+        </div>
+        <div class="member-card__meta">
+          <p class="member-card__role">${escapeHtml(member.role)}</p>
+          <p class="member-card__name">${escapeHtml(member.name)}</p>
+        </div>
+      </a>
+    `;
+  }
+
+  function getVisibleMembers(selectedRole) {
+    return selectedRole === ALL_ROLE
+      ? members
+      : members.filter((member) => member.role === selectedRole);
+  }
+
+  function renderMemberDetail(member) {
+    return `
+      <a class="member-detail__back" href="./index.html">← MEMBER一覧に戻る</a>
+      <div class="member-detail__layout">
+        <img class="member-detail__image" src="${member.image}" alt="${escapeHtml(member.imageAlt)}" />
+        <div class="member-detail__meta">
+          <p class="member-detail__role">${escapeHtml(member.role)}</p>
+          <h1 class="member-detail__name">${escapeHtml(member.name)}</h1>
+          <p class="member-detail__greeting">${escapeHtml(member.greeting)}</p>
+        </div>
+      </div>
+    `;
+  }
+
   function initMemberListPage() {
     const grid = document.getElementById('memberGrid');
     const filterRoot = document.getElementById('memberFilter');
     if (!grid || !filterRoot) return;
 
-    const roles = ['すべて', ...new Set(members.map((member) => member.role))];
-    let selectedRole = 'すべて';
+    const roles = [ALL_ROLE, ...new Set(members.map((member) => member.role))];
+    let selectedRole = ALL_ROLE;
 
     function renderFilterButtons() {
-      filterRoot.innerHTML = roles
-        .map(
-          (role) => `
-            <button type="button" class="member-filter__btn ${role === selectedRole ? 'is-active' : ''}" data-role="${escapeHtml(role)}">
-              ${escapeHtml(role)}
-            </button>
-          `
-        )
-        .join('');
+      filterRoot.innerHTML = roles.map((role) => renderFilterButton(role, selectedRole)).join('');
     }
 
     function renderMembers() {
-      const visibleMembers =
-        selectedRole === 'すべて' ? members : members.filter((member) => member.role === selectedRole);
-
-      grid.innerHTML = visibleMembers
-        .map(
-          (member) => `
-            <a class="member-card" href="./detail.html?id=${encodeURIComponent(member.id)}" aria-label="${escapeHtml(member.name)}の詳細を見る">
-              <div class="member-card__image-wrap">
-                <img class="member-card__image" src="${member.image}" alt="${escapeHtml(member.imageAlt)}" loading="lazy" />
-              </div>
-              <div class="member-card__meta">
-                <p class="member-card__role">${escapeHtml(member.role)}</p>
-                <p class="member-card__name">${escapeHtml(member.name)}</p>
-              </div>
-            </a>
-          `
-        )
-        .join('');
+      grid.innerHTML = getVisibleMembers(selectedRole).map(renderMemberCard).join('');
     }
 
     filterRoot.addEventListener('click', function (event) {
@@ -98,25 +120,14 @@
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     const member = members.find((item) => item.id === id) || members[0];
-
-    detailRoot.innerHTML = `
-      <a class="member-detail__back" href="./index.html">← MEMBER一覧に戻る</a>
-      <div class="member-detail__layout">
-        <img class="member-detail__image" src="${member.image}" alt="${escapeHtml(member.imageAlt)}" />
-        <div class="member-detail__meta">
-          <p class="member-detail__role">${escapeHtml(member.role)}</p>
-          <h1 class="member-detail__name">${escapeHtml(member.name)}</h1>
-          <p class="member-detail__greeting">${escapeHtml(member.greeting)}</p>
-        </div>
-      </div>
-    `;
+    detailRoot.innerHTML = renderMemberDetail(member);
   }
 
-  if (document.body.dataset.page === 'member') {
+  if (PAGE === 'member') {
     initMemberListPage();
   }
 
-  if (document.body.dataset.page === 'member-detail') {
+  if (PAGE === 'member-detail') {
     initMemberDetailPage();
   }
 })();
