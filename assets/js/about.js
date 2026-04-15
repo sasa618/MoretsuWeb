@@ -28,23 +28,23 @@
     },
   ];
 
+  function renderLeaderCard(leader) {
+    return `
+      <article class="about-card">
+        <img class="about-card__photo" src="${leader.image}" alt="${leader.imageAlt}" loading="lazy" />
+        <div class="about-card__body">
+          <p class="about-eyebrow">${leader.eyebrow}</p>
+          <h3 class="about-card__heading">${leader.heading}</h3>
+          <p class="about-card__jp-title">${leader.title}</p>
+          <p class="about-card__copy">${leader.summary}</p>
+          <a class="about-card__button" href="${leader.buttonHref}">${leader.buttonLabel}</a>
+        </div>
+      </article>
+    `;
+  }
+
   const cards = document.getElementById('aboutCards');
   if (!cards) return;
 
-  cards.innerHTML = leaders
-    .map(
-      (leader) => `
-        <article class="about-card">
-          <img class="about-card__photo" src="${leader.image}" alt="${leader.imageAlt}" loading="lazy" />
-          <div class="about-card__body">
-            <p class="about-eyebrow">${leader.eyebrow}</p>
-            <h3 class="about-card__heading">${leader.heading}</h3>
-            <p class="about-card__jp-title">${leader.title}</p>
-            <p class="about-card__copy">${leader.summary}</p>
-            <a class="about-card__button" href="${leader.buttonHref}">${leader.buttonLabel}</a>
-          </div>
-        </article>
-      `
-    )
-    .join('');
+  cards.innerHTML = leaders.map(renderLeaderCard).join('');
 })();
